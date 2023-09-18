@@ -1,0 +1,118 @@
+@import '~normalize.css';
+.list-item {
+	font-size: 20px;
+	width: 450px;
+	background: #222222;
+	border-radius: 10px;
+	color: white;
+	padding: 0 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border: none;
+	outline: none;
+	&-active {
+		outline: auto;
+	}
+	&-toggle {
+		text-decoration: line-through;
+	}
+}
+.block-list {
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+}
+.btn-item {
+	margin-left: 10px;
+	background-color: #999999;
+	height: 38px;
+	width: 38px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	background-image: url('../img/trash.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	appearance: none;
+}
+.btn-edit {
+	margin-left: 10px;
+	background-color: #999999;
+	height: 38px;
+	width: 38px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	background-image: url('../img/pencil.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	appearance: none;
+	&-active {
+		background-image: url('../img/submit.svg');
+		appearance: none;
+	}
+}
+.btn-edit-active {
+	margin-left: 10px;
+	background-color: #999999;
+	height: 38px;
+	width: 38px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	background-image: url('../img/submit.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	appearance: none;
+}
+.btn-complete {
+	margin-left: 10px;
+	background-color: #999999;
+	height: 38px;
+	width: 38px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	background-image: url('../img/submit.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	appearance: none;
+}
+.list-item-toggle {
+	color: #c5aeff;
+	text-decoration: line-through;
+	opacity: 0.6;
+}
+.checkbox-complete-label {
+	font-family: system-ui, sans-serif;
+	font-size: 1.5rem;
+	height: 38px;
+	width: 38px;
+	margin-left: 10px;
+}
+.checkbox-complete {
+	appearance: none;
+	height: 38px;
+	width: 38px;
+	border-radius: 10px;
+	border: 0.15em solid black;
+	display: grid;
+	place-content: center;
+	background: #999999;
+}
+
+.checkbox-complete::before {
+	content: '';
+	width: 0.65em;
+	height: 0.65em;
+	clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+	transform: scale(0);
+	transform-origin: bottom left;
+	transition: 120ms transform ease-in-out;
+	box-shadow: inset 1em 1em var(--form-control-color);
+	background-color: black;
+}
+.checkbox-complete:checked::before {
+	transform: scale(1);
+}
